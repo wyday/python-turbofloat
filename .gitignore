@@ -5,6 +5,14 @@ __pycache__/
 
 # C extensions
 *.so
+*.dylib
+*.dll
+
+# TurboActivate specific
+TurboActivate.dat
+
+# Hide VSCode settings
+.vscode
 
 # Distribution / packaging
 .Python
@@ -32,6 +40,7 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+MANIFEST
 
 # Installer logs
 pip-log.txt
