@@ -52,7 +52,8 @@ def leasecallback(status):
         Don't just exit the app without warning or without giving the user ptions.
         For example, this behavior right here is a terrible example to be etting:
         '''
-        sys.exit("The app is exiting. In your app you shouldn't just abruptly exit! That's bad. See the comments in the example app.")
+        print("The app is exiting. In your app you shouldn't just abruptly exit! That's bad. See the comments in the example app.")
+        quit()
 
 
 
