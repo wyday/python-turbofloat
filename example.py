@@ -122,7 +122,8 @@ if __name__ == "__main__":
             if tf.has_lease():
                 tf.drop_lease()
 
-            sys.exit("Exiting now. Bye.")
+            print('Exiting now. Bye.')
+            quit()
 
         else:
             print('Invalid input. Press X to exit the app.')

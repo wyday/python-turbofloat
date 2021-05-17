@@ -4,7 +4,7 @@ import setuptools
 from distutils.core import setup
 
 setup(name="turbofloat",
-      version="4.4.4",
+      version="4.4.4.1",
       description="Python integration for the LimeLM TurboFloat library. This lets you add floating licensing (a.k.a. concurrent licensing) to your Python app.",
       url="https://wyday.com/limelm/help/using-turbofloat-with-python/",
       download_url="https://github.com/wyday/python-turbofloat",

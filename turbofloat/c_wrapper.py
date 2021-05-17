@@ -28,7 +28,6 @@ import sys
 from os import path as ospath
 from ctypes import (
     cdll,
-    c_uint,
     c_uint32,
     c_char_p,
     c_wchar_p,

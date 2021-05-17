@@ -24,7 +24,7 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
-from ctypes import pointer, sizeof, c_uint32, c_ushort
+from ctypes import pointer, c_uint32, c_ushort
 
 from turbofloat.c_wrapper import *
 
@@ -72,7 +72,9 @@ class TurboFloat(object):
         if self._handle == 0:
             raise TurboFloatDatFileError()
 
-        # "cast" the native python function to 
+        # "cast" the native python function to LeaseCallback type
+        # save it locally so that it acutally works when it's called
+        # back
         self._callback = LeaseCallback(callback)
 
         self._lib.TF_SetLeaseCallback(self._handle, self._callback)
@@ -200,7 +202,7 @@ class TurboFloat(object):
             self._lib.TF_IsDateValid(self._handle, wstr(date), TF_HAS_NOT_EXPIRED)
 
             return True
-        except TurboActivateFlagsError as e:
+        except TurboFloatFlagsError as e:
             raise e
         except TurboFloatError:
             return False
